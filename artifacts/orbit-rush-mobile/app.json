@@ -1,0 +1,41 @@
+{
+  "expo": {
+    "name": "Orbit Rush",
+    "slug": "orbit-rush-mobile",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "scheme": "orbit-rush",
+    "userInterfaceStyle": "dark",
+    "icon": "./assets/images/icon_2.png",
+    "ios": {
+      "bundleIdentifier": "com.replit.orbitrushmobile",
+      "supportsTablet": false
+    },
+    "android": {
+      "package": "com.replit.orbitrushmobile",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/icon_2.png",
+        "backgroundColor": "#0d1020"
+      }
+    },
+    "web": {
+      "favicon": "./assets/images/icon_2.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/icon_2.png",
+          "imageWidth": 96,
+          "resizeMode": "contain",
+          "backgroundColor": "#0d1020"
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": true
+    }
+  }
+}

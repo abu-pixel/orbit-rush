@@ -1,0 +1,1 @@
+- [Expo SDK 57 splash config](expo-sdk-57-splash.md) — configure splash through the `expo-splash-screen` plugin; the app config rejects a top-level `splash` key.
