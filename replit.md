@@ -1,6 +1,6 @@
-# [Project name]
+# Orbit Rush
 
-_Replace the heading above with the project's name, and this line with one sentence describing what this app does for users._
+Orbit Rush is a quick-session, skill-based arcade game about dodging incoming hazards, collecting sparks, and chasing a personal best.
 
 ## Run & Operate
 
@@ -22,23 +22,29 @@ _Replace the heading above with the project's name, and this line with one sente
 
 ## Where things live
 
-_Populate as you build — short repo map plus pointers to the source-of-truth file for DB schema, API contracts, theme files, etc._
+- `artifacts/orbit-rush/src/game/engine.ts` — movement, hazards, spark scoring, dash, and trail unlock rules
+- `artifacts/orbit-rush/src/game/progress.ts` — browser-local best score, lifetime sparks, runs, and selected trail
+- `artifacts/orbit-rush/src/App.tsx` and `src/index.css` — game UI, canvas rendering, and visual theme
 
 ## Architecture decisions
 
-_Populate as you build — non-obvious choices a reader couldn't infer from the code (3-5 bullets)._
+- Game rules run client-side; no account or network connection is needed to play.
+- Progress is stored locally in the browser and is not tied to a schedule.
+- Replay value comes from skill, personal-best scores, and cosmetic trail unlocks; stopping never removes progress.
 
 ## Product
 
-_Describe the high-level user-facing capabilities of this app once they exist._
+- Dodge hazards, collect sparks, build a temporary combo multiplier, and use a cooldown dash.
+- Pause and resume at any time; unlock and select visual trails with lifetime spark totals.
 
 ## User preferences
 
-_Populate as you build — explicit user instructions worth remembering across sessions._
+- Make the game highly engaging through skill and replay value, without punishing players for taking breaks.
 
 ## Gotchas
 
-_Populate as you build — sharp edges, "always run X before Y" rules._
+- Keep the logical playfield at the size exported from the game engine; scale pointer coordinates into it before sending input.
+- Persist run results only on the first transition from playing to game-over to avoid double-counting.
 
 ## Pointers
 

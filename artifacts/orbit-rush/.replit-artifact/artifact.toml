@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Orbit Rush"
+description = "A quick, skill-based arcade game about threading a tiny ship through shifting orbital gates. Build combos, beat your personal best, and unlock visual trails at your own pace."
+version = "1.0.0"
+id = "artifacts/orbit-rush"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 24275
+
+[services.development]
+run = "pnpm --filter @workspace/orbit-rush run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/orbit-rush", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/orbit-rush/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "24275"
+BASE_PATH = "/"
