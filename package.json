@@ -10,7 +10,10 @@
   },
   "private": true,
   "dependencies": {
-    "@replit/connectors-sdk": "^0.4.3"
+    "@react-native/debugger-frontend": "^0.88.1",
+    "@replit/connectors-sdk": "^0.4.3",
+    "@rollup/rollup-win32-x64-msvc": "^4.67.5",
+    "lightningcss-win32-x64-msvc": "^1.33.0"
   },
   "devDependencies": {
     "prettier": "^3.9.10",

@@ -73,5 +73,8 @@
     "vite": "catalog:",
     "wouter": "^3.3.5",
     "zod": "catalog:"
+  },
+  "dependencies": {
+    "@rollup/rollup-win32-x64-msvc": "^4.67.5"
   }
 }
